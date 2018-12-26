@@ -8,7 +8,7 @@
 
 #import "JFRefreshTableView.h"
 #import <MJRefresh/MJRefresh.h>
-#import "UITableView+jf_TableViewEmpty.h"
+
 
 @interface JFRefreshTableView ()
 
@@ -19,7 +19,7 @@
 @implementation JFRefreshTableView
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
-    
+
     self = [super initWithFrame:frame style:style];
     if (self) {
         

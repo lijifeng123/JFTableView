@@ -42,7 +42,10 @@
     if (!_imageView) {
         _imageView = [[UIImageView alloc]initWithFrame:CGRectMake((self.bounds.size.width - 100)/2 , (self.bounds.size.height - 100)/2 - 50, 100, 100)];
         _imageView.image = [UIImage imageNamed:@"SDAlertSuccess"];
-        _imageView.contentMode = UIViewContentModeCenter;
+        if ([self.delegate respondsToSelector:@selector(showImageName)]) {
+            _imageView.image = [UIImage imageNamed:[self.delegate showImageName]];
+        }
+        _imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return _imageView;
 }
@@ -53,8 +56,15 @@
 //        _messageLabel.backgroundColor = [UIColor greenColor];
         _messageLabel.textAlignment = NSTextAlignmentCenter;
         _messageLabel.text = @"没数据是为啥？咋心里一点b数没有";
+        if ([self.delegate respondsToSelector:@selector(alertMessage)]) {
+            _messageLabel.text = [self.delegate alertMessage];
+        }
     }
     return _messageLabel;
+}
+
+- (void)setDelegate:(id<ConfigEmptyViewDelegate>)delegate{
+    _delegate = delegate;
 }
 
 @end

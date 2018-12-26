@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import "JF_tableViewEmptyView.h"
 
+
 @implementation UITableView (jf_TableViewEmpty)
 
 + (void)load{
@@ -44,12 +45,26 @@
     
     if (!havingData) {
         JF_tableViewEmptyView *emptyView = [[JF_tableViewEmptyView alloc]init];
+        if ([self.jf_configEmptyDelegate respondsToSelector:@selector(alertMessage)]) {
+            emptyView.delegate = self.jf_configEmptyDelegate;
+        }
+        NSLog(@"%@",self.jf_configEmptyDelegate);
         emptyView.frame = self.bounds;
         self.tableFooterView = emptyView;
     }else{
         self.tableFooterView = [UIView new];
     }
     
+}
+
+- (void)setJf_configEmptyDelegate:(id<ConfigEmptyViewDelegate>)jf_configEmptyDelegate{
+    
+    objc_setAssociatedObject(self, @"hhh", jf_configEmptyDelegate, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (id<ConfigEmptyViewDelegate>)jf_configEmptyDelegate{
+    
+    return objc_getAssociatedObject(self, @"hhh");
 }
 
 @end

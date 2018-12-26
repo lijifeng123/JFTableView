@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "JFRefreshTableView.h"
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,JFRefreshDelegaete>
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,JFRefreshDelegaete,ConfigEmptyViewDelegate>
 
 @property (nonatomic,assign) NSInteger rowNum;
 @property (nonatomic,strong) JFRefreshTableView *tableView;
@@ -31,6 +31,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.jf_tableViewDelegate = self;
+        _tableView.jf_configEmptyDelegate = self;
     }
     return _tableView;
 }
@@ -70,6 +71,15 @@
     
     self.rowNum = 5;
     [self.tableView reloadData];
+}
+
+- (nonnull NSString *)alertMessage {
+    return @"改掉了，我心里就是没数";
+}
+
+- (NSString *)showImageName{
+    
+    return @"test";
 }
 
 @end

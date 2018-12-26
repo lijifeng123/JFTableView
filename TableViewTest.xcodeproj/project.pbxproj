@@ -69,6 +69,7 @@
 		9614031921D1E2A90058BC33 /* UITableView+jf_TableViewEmpty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+jf_TableViewEmpty.m"; sourceTree = "<group>"; };
 		962BEC6821D2002900254F7D /* JF_tableViewEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JF_tableViewEmptyView.h; sourceTree = "<group>"; };
 		962BEC6921D2002900254F7D /* JF_tableViewEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JF_tableViewEmptyView.m; sourceTree = "<group>"; };
+		969C0EA721D330ED00D2F245 /* ConfigEmptyViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigEmptyViewDelegate.h; sourceTree = "<group>"; };
 		A36A514AF41FBE116818CA9A /* Pods-TableViewTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewTestUITests.release.xcconfig"; path = "Target Support Files/Pods-TableViewTestUITests/Pods-TableViewTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BEF6276364545FF2E23FCE42 /* Pods-TableViewTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewTestTests.release.xcconfig"; path = "Target Support Files/Pods-TableViewTestTests/Pods-TableViewTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		D5CA380F16DECA668087955E /* Pods-TableViewTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-TableViewTestUITests/Pods-TableViewTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 				9614031921D1E2A90058BC33 /* UITableView+jf_TableViewEmpty.m */,
 				962BEC6821D2002900254F7D /* JF_tableViewEmptyView.h */,
 				962BEC6921D2002900254F7D /* JF_tableViewEmptyView.m */,
+				969C0EA721D330ED00D2F245 /* ConfigEmptyViewDelegate.h */,
 				961402E921D1CCA60058BC33 /* Main.storyboard */,
 				961402EC21D1CCA70058BC33 /* Assets.xcassets */,
 				961402EE21D1CCA70058BC33 /* LaunchScreen.storyboard */,

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UITableView+jf_TableViewEmpty.h"
 
 typedef NS_ENUM(NSInteger , RefreshType){
     /** 上拉刷新 */

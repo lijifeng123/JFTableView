@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ConfigEmptyViewDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UITableView (jf_TableViewEmpty)
+
+@property (nonatomic,weak) id <ConfigEmptyViewDelegate> jf_configEmptyDelegate;
 
 @end
 
